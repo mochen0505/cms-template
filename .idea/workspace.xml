@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a90f6f-28d3-423d-b93a-107e309b4938" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/login/components/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locale/en_US.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/en_US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/components/login-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,7 +93,7 @@
       <workItem from="1572235524302" duration="1966000" />
       <workItem from="1573094909859" duration="185000" />
       <workItem from="1573095637528" duration="5573000" />
-      <workItem from="1573108102713" duration="2927000" />
+      <workItem from="1573108102713" duration="4298000" />
     </task>
     <task id="LOCAL-00001" summary="reconstructured">
       <created>1571497024479</created>
@@ -111,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571888368595</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: 登陆表单重写">
+      <created>1573111066399</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573111066400</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reconstructured" />
     <MESSAGE value="intl json" />
-    <option name="LAST_COMMIT_MESSAGE" value="intl json" />
+    <MESSAGE value="feat: 登陆表单重写" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 登陆表单重写" />
   </component>
 </project>

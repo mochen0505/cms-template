@@ -4,7 +4,7 @@ import { Row, Col } from 'antd';
 import { withTranslation } from 'react-i18next';
 import { selectLoading } from '../../redux/selectors';
 import { handleSignIn } from '../../redux/actions/authAction';
-import LoginForm from './components/login';
+import LoginForm from './components/login-form';
 import utils from '../../libs/utils';
 import './index.less';
 
