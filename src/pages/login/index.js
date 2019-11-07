@@ -51,7 +51,7 @@ class Login extends React.Component {
           <p>demo react admin</p>
         </Col>
         <Col xs={18} sm={12} md={6} className="login_wrapper">
-          <LoginForm onEvent={this.onEvent} btnLoading={isLoading} />
+          <LoginForm onEvent={this.onEvent} isLoading={isLoading} />
         </Col>
       </Row>
     );

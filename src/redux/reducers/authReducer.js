@@ -1,4 +1,4 @@
-import { LOADING, TOKEN } from '../constants/actionTypes';
+import { CAPTCHA_BUTTON, LOADING, TOKEN } from '../constants/actionTypes';
 
 // loading
 export const loadingReducer = (state = { isLoading: false }, action) => {
@@ -6,6 +6,18 @@ export const loadingReducer = (state = { isLoading: false }, action) => {
     case LOADING:
       return {
         isLoading: action.isLoading
+      };
+    default:
+      return state;
+  }
+};
+
+// captcha btn
+export const captchaButtonReducer = (state = { isDisabled: false }, action) => {
+  switch (action.type) {
+    case CAPTCHA_BUTTON:
+      return {
+        isDisabled: action.isDisabled
       };
     default:
       return state;

@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a90f6f-28d3-423d-b93a-107e309b4938" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/components/login-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/components/login-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sign-up/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-up/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/authAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +42,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\github\cms-template\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,7 +101,7 @@
       <workItem from="1572235524302" duration="1966000" />
       <workItem from="1573094909859" duration="185000" />
       <workItem from="1573095637528" duration="5573000" />
-      <workItem from="1573108102713" duration="4298000" />
+      <workItem from="1573108102713" duration="16867000" />
     </task>
     <task id="LOCAL-00001" summary="reconstructured">
       <created>1571497024479</created>
@@ -116,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573111066400</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: rename">
+      <created>1573112427227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573112427227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +171,7 @@
     <MESSAGE value="reconstructured" />
     <MESSAGE value="intl json" />
     <MESSAGE value="feat: 登陆表单重写" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 登陆表单重写" />
+    <MESSAGE value="feat: rename" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: rename" />
   </component>
 </project>
