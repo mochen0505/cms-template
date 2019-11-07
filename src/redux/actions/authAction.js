@@ -127,4 +127,10 @@ const handleSignOut = () => {
   };
 };
 
-export { handleSignIn, disableCaptcha, handleCaptcha, handleSignUp, handleSignOut };
+export {
+  handleSignIn,
+  disableCaptcha,
+  handleCaptcha,
+  handleSignUp,
+  handleSignOut
+};

@@ -3,7 +3,11 @@ import { connect } from 'react-redux';
 import { Row, Col } from 'antd';
 import { withTranslation } from 'react-i18next';
 import { selectLoading, selectCaptchaButton } from '../../redux/selectors';
-import { handleCaptcha, disableCaptcha, handleSignUp } from '../../redux/actions/authAction';
+import {
+  handleCaptcha,
+  disableCaptcha,
+  handleSignUp
+} from '../../redux/actions/authAction';
 import SignUpForm from './components/sign-up-form';
 import utils from '../../libs/utils';
 import './index.less';
@@ -67,7 +71,9 @@ class SignUp extends React.Component {
       <Row type="flex" justify="space-around" className="sign_up_content">
         <Col xs={18} sm={12} md={6} className="sign_up_wrapper">
           <SignUpForm
-            onEvent={this.onEvent} isLoading={isLoading} disabled={isDisabled}
+            onEvent={this.onEvent}
+            isLoading={isLoading}
+            disabled={isDisabled}
           />
         </Col>
       </Row>
@@ -75,9 +81,7 @@ class SignUp extends React.Component {
   }
 }
 
-export default
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(withTranslation()(SignUp))
-;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withTranslation()(SignUp));

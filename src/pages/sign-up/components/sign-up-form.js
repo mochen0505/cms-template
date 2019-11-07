@@ -53,9 +53,9 @@ class SignUpForm extends React.Component {
       this.setState({ count: count - 1 });
       if (count < 1) {
         this.setState({
-          count: 60,
+          count: 60
         });
-        onEvent('resetCaptchaButton', false)
+        onEvent('resetCaptchaButton', false);
       }
     }
   };
@@ -65,7 +65,7 @@ class SignUpForm extends React.Component {
     e.preventDefault();
     form.validateFields(['mobile'], (err, values) => {
       if (!err && values) {
-        onEvent('signUpCaptchaSubmit', values)
+        onEvent('signUpCaptchaSubmit', values);
       }
     });
   };
@@ -89,7 +89,10 @@ class SignUpForm extends React.Component {
     formProps.name = getFieldDecorator('name', {
       rules: [
         { required: true, message: t('请输入用户名') },
-        { pattern: /([a-zA-Z0-9]|[\u4E00-\u9FA5]){5,12}/, message: t('5-12个字符,只可包含数字和中英文字符') }
+        {
+          pattern: /([a-zA-Z0-9]|[\u4E00-\u9FA5]){5,12}/,
+          message: t('5-12个字符,只可包含数字和中英文字符')
+        }
       ]
     });
     formProps.mobile = getFieldDecorator('mobile', {
@@ -101,7 +104,10 @@ class SignUpForm extends React.Component {
     formProps.password = getFieldDecorator('password', {
       rules: [
         { required: true, message: t('请输入密码') },
-        { pattern: /([a-zA-Z0-9_]){6,13}/, message: t('6-13个字符,只可包含数字字母下划线') },
+        {
+          pattern: /([a-zA-Z0-9_]){6,13}/,
+          message: t('6-13个字符,只可包含数字字母下划线')
+        },
         { validator: this.checkConfirm }
       ]
     });
@@ -112,14 +118,10 @@ class SignUpForm extends React.Component {
       ]
     });
     formProps.captcha = getFieldDecorator('captcha', {
-      rules: [
-        { required: true, message: t('请输入验证码') },
-      ]
+      rules: [{ required: true, message: t('请输入验证码') }]
     });
     formProps.term = getFieldDecorator('term', {
-      rules: [
-        { validator: this.checkTerm, message: t('请勾选') }
-      ]
+      rules: [{ validator: this.checkTerm, message: t('请勾选') }]
     });
 
     return formProps;
@@ -133,7 +135,7 @@ class SignUpForm extends React.Component {
   componentWillUnmount() {
     const { onEvent } = this.props;
     clearInterval(this.interval);
-    onEvent('resetCaptchaButton', false)
+    onEvent('resetCaptchaButton', false);
   }
 
   render() {
@@ -199,9 +201,7 @@ class SignUpForm extends React.Component {
                   onClick={this.handleCaptchaClick}
                   disabled={disabled}
                 >
-                  {!disabled
-                    ? t('验证码')
-                    : count}
+                  {!disabled ? t('验证码') : count}
                 </Button>
               </Col>
             </Row>
