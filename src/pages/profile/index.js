@@ -23,10 +23,15 @@ import { selectProfile } from '../../redux/selectors';
 import options from './locale-data';
 import utils from '../../libs/utils';
 import { baseURL } from '../../configs/url';
+import { matchExtension } from '../../libs/regExp';
 import './index.less';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
+const uploadConfigs = {
+  fileSize: 2,
+  fileType: [ 'png', 'jpeg', 'jpg' ]
+};
 
 const mapStateToProps = (state) => {
   return {
@@ -89,18 +94,21 @@ class Profile extends React.Component {
     return options;
   };
 
-  beforeUpload = (file) => {
+  beforeUpload = (file) => new Promise((resolve, reject) => {
     const { t } = this.props;
-    const isJPG = file.type === 'image/jpeg';
-    if (!isJPG) {
-      utils.nMessage.error(t('只能上传JPG'));
-    }
-    const isLt2M = file.size / 1024 / 1024 < 2;
-    if (!isLt2M) {
+    const isLtSize = file.size / 1024 / 1024 < uploadConfigs.fileSize;
+    const extension = file.name && file.name.match(matchExtension) && file.name.match(matchExtension)[1];
+    if (!isLtSize) {
       utils.nMessage.error(t('超过2MB'));
+      reject(file);
+
+    } else if (!uploadConfigs.fileType.includes(extension)) {
+      utils.nMessage.error(t('格式错误'));
+      reject(file)
+    } else {
+      resolve(file)
     }
-    return isJPG && isLt2M;
-  };
+  });
 
   handleChange = (info) => {
     const { t } = this.props;

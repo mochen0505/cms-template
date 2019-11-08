@@ -27,7 +27,7 @@
   "保存": "Save",
   "保存成功": "Saved",
   "保存失败": "Save failed",
-  "只能上传JPG": "Only JPGs are allowed",
+  "格式错误": "Incorrect Format",
   "超过2MB": "Exceed 2MB",
   "上传": "Upload",
   "上传成功": "Uploaded",
