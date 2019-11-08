@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a90f6f-28d3-423d-b93a-107e309b4938" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/mongoSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/components/login-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sign-up/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-up/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/authAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/constants/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo-node-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -101,7 +93,8 @@
       <workItem from="1572235524302" duration="1966000" />
       <workItem from="1573094909859" duration="185000" />
       <workItem from="1573095637528" duration="5573000" />
-      <workItem from="1573108102713" duration="16867000" />
+      <workItem from="1573108102713" duration="17119000" />
+      <workItem from="1573190525820" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="reconstructured">
       <created>1571497024479</created>
@@ -131,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573112427227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: 注册表单重写">
+      <created>1573134908998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573134908998</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: format">
+      <created>1573135008637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573135008637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +179,8 @@
     <MESSAGE value="intl json" />
     <MESSAGE value="feat: 登陆表单重写" />
     <MESSAGE value="feat: rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: rename" />
+    <MESSAGE value="feat: 注册表单重写" />
+    <MESSAGE value="fix: format" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: format" />
   </component>
 </project>

@@ -82,8 +82,8 @@ class SignUpForm extends React.Component {
   };
 
   getForm = () => {
-    const { t } = this.props;
-    const { getFieldDecorator } = this.props.form;
+    const { form, t } = this.props;
+    const { getFieldDecorator } = form;
 
     let formProps = [];
     formProps.name = getFieldDecorator('name', {
