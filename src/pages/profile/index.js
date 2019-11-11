@@ -20,7 +20,7 @@ import {
   handleEditProfile
 } from '../../redux/actions/profileAction';
 import { selectProfile } from '../../redux/selectors';
-import options from './locale-data';
+import localeData from './components/data.json';
 import utils from '../../libs/utils';
 import { baseURL } from '../../configs/url';
 import { matchExtension } from '../../libs/regExp';
@@ -64,8 +64,10 @@ class Profile extends React.Component {
           birthday: values['birthday']
             ? values['birthday'].format('YYYY-MM-DD')
             : null,
-          province: values['provinceAndCity'][0] || null,
-          city: values['provinceAndCity'][1] || null
+          province: values['address'][0] || null,
+          city: values['address'][1] || null,
+          district: values['address'][2] || null,
+          county: values['address'][3] || null,
         };
         this.props
           .handleEditProfile(params)
@@ -79,19 +81,6 @@ class Profile extends React.Component {
           });
       }
     });
-  };
-
-  preProcessingLocale = (options) => {
-    for (let province of options) {
-      if (province.children) {
-        for (let city of province.children) {
-          if (city.children && city.children.length === 0) {
-            delete city.children;
-          }
-        }
-      }
-    }
-    return options;
   };
 
   beforeUpload = (file) => new Promise((resolve, reject) => {
@@ -152,6 +141,8 @@ class Profile extends React.Component {
       birthday,
       province,
       city,
+      district,
+      county,
       avatar
     } = this.props.profile;
     const { getFieldDecorator } = this.props.form;
@@ -260,12 +251,12 @@ class Profile extends React.Component {
                 )}
               </FormItem>
               <FormItem label={t('所在省市')} {...formItemLayout}>
-                {getFieldDecorator('provinceAndCity', {
-                  initialValue: [province, city]
+                {getFieldDecorator('address', {
+                  initialValue: [province, city, district, county]
                 })(
                   <Cascader
                     placeholder={t('选择所在省市')}
-                    options={this.preProcessingLocale(options)}
+                    options={localeData}
                   />
                 )}
               </FormItem>

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a90f6f-28d3-423d-b93a-107e309b4938" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/libs/regExp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/components/profile-form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/profile/components/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locale/en_US.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/en_US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locale/zh_CN.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/locale/zh_CN.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/profile/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,11 +43,11 @@
       <recent name="D:\github\cms-template" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moche\OneDrive\Documents\GitHub\Playgrounds\Web\cms-template\src\pages\profile\components" />
       <recent name="D:\github\cms-template\src\pages\profile" />
       <recent name="D:\github\cms-template\src\configs" />
       <recent name="D:\github\cms-template\src\assets\images" />
       <recent name="D:\github\cms-template\src\assets\svgs" />
-      <recent name="D:\github\cms-template\src\locale" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -98,7 +95,7 @@
       <workItem from="1573094909859" duration="185000" />
       <workItem from="1573095637528" duration="5573000" />
       <workItem from="1573108102713" duration="17119000" />
-      <workItem from="1573190525820" duration="5180000" />
+      <workItem from="1573190525820" duration="9247000" />
     </task>
     <task id="LOCAL-00001" summary="reconstructured">
       <created>1571497024479</created>
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573191190219</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix: minor">
+      <created>1573200966300</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573200966300</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
