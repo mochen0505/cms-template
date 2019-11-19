@@ -1,33 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-  Button,
   Card,
   Row,
   Col,
   Form,
-  Input,
-  Radio,
-  DatePicker,
-  Cascader,
   Upload,
   Icon
 } from 'antd';
-import moment from 'moment';
 import { withTranslation } from 'react-i18next';
 import {
   handleProfile,
   handleEditProfile
 } from '../../redux/actions/profileAction';
 import { selectProfile } from '../../redux/selectors';
-import localeData from './components/data.json';
 import utils from '../../libs/utils';
 import { baseURL } from '../../configs/url';
 import { matchExtension } from '../../libs/regExp';
 import './index.less';
+import ProfileForm from './components/profile-form';
 
-const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
 const uploadConfigs = {
   fileSize: 2,
   fileType: [ 'png', 'jpeg', 'jpg' ]
@@ -54,23 +46,11 @@ class Profile extends React.Component {
     };
   }
 
-  handleClick = (e) => {
-    const { t } = this.props;
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err && values) {
-        const params = {
-          gender: values['gender'],
-          birthday: values['birthday']
-            ? values['birthday'].format('YYYY-MM-DD')
-            : null,
-          province: values['address'][0] || null,
-          city: values['address'][1] || null,
-          district: values['address'][2] || null,
-          county: values['address'][3] || null,
-        };
-        this.props
-          .handleEditProfile(params)
+  onEvent = (type, params) => {
+    const { handleEditProfile, t } = this.props;
+    switch (type) {
+      case 'profileSubmit':
+        handleEditProfile(params)
           .then((res) => {
             res === -1
               ? utils.nMessage.error(t('保存失败'))
@@ -79,8 +59,10 @@ class Profile extends React.Component {
           .catch((err) => {
             utils.nMessage.error(t('保存失败'));
           });
-      }
-    });
+        break;
+      default:
+        break;
+    }
   };
 
   beforeUpload = (file) => new Promise((resolve, reject) => {
@@ -132,62 +114,11 @@ class Profile extends React.Component {
   }
 
   render() {
-    const { t } = this.props;
+    const { profile, t } = this.props;
     const {
-      name,
-      mobile,
-      balance,
-      gender,
-      birthday,
-      province,
-      city,
-      district,
-      county,
       avatar
     } = this.props.profile;
-    const { getFieldDecorator } = this.props.form;
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 7 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 17 }
-      }
-    };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0
-        },
-        sm: {
-          span: 16,
-          offset: 7
-        }
-      }
-    };
-    const formItems = [
-      {
-        label: t('姓名'),
-        key: 'name',
-        initialValue: name,
-        disabled: true
-      },
-      {
-        label: t('手机号码'),
-        key: 'mobile',
-        initialValue: mobile,
-        disabled: true
-      },
-      {
-        label: t('余额'),
-        key: 'balance',
-        initialValue: String(balance),
-        disabled: true
-      }
-    ];
+
     const uploadButton = (
       <div>
         <Icon type={this.state.picLoading ? 'loading' : 'plus'} />
@@ -198,74 +129,7 @@ class Profile extends React.Component {
       <Card bordered={false} className="profile">
         <Row type="flex" justify="space-around">
           <Col xs={24} sm={24} md={8}>
-            <Form>
-              {formItems.map((item, i) => (
-                <FormItem key={i} label={item.label} {...formItemLayout}>
-                  {getFieldDecorator(item.key, {
-                    initialValue: item.initialValue,
-                    validate: [
-                      {
-                        trigger: 'onBlur',
-                        rules: [
-                          {
-                            required: item.required,
-                            message: item.emptyMessage
-                          }
-                        ]
-                      },
-                      {
-                        trigger: ['onBlur', 'onChange'],
-                        rules: [
-                          { pattern: item.pattern, message: item.errorMessage },
-                          { validator: item.validator, message: item.vMessage }
-                        ]
-                      }
-                    ]
-                  })(
-                    <Input
-                      type={item.type}
-                      placeholder={item.placeholder}
-                      disabled={item.disabled}
-                    />
-                  )}
-                </FormItem>
-              ))}
-              <FormItem label={t('性别')} {...formItemLayout}>
-                {getFieldDecorator('gender', {
-                  initialValue: gender
-                })(
-                  <RadioGroup>
-                    <Radio value="male">{t('男')}</Radio>
-                    <Radio value="female">{t('女')}</Radio>
-                  </RadioGroup>
-                )}
-              </FormItem>
-              <FormItem label={t('生日')} {...formItemLayout}>
-                {getFieldDecorator('birthday', {
-                  initialValue: birthday ? moment(birthday, 'YYYY-MM-DD') : null
-                })(
-                  <DatePicker
-                    placeholder={t('选择日期')}
-                    style={{ width: '100%' }}
-                  />
-                )}
-              </FormItem>
-              <FormItem label={t('所在省市')} {...formItemLayout}>
-                {getFieldDecorator('address', {
-                  initialValue: [province, city, district, county]
-                })(
-                  <Cascader
-                    placeholder={t('选择所在省市')}
-                    options={localeData}
-                  />
-                )}
-              </FormItem>
-              <FormItem {...tailFormItemLayout}>
-                <Button type="primary" onClick={this.handleClick}>
-                  {t('保存')}
-                </Button>
-              </FormItem>
-            </Form>
+            <ProfileForm onEvent={this.onEvent} profile={profile}/>
           </Col>
           <Col xs={24} sm={24} md={8}>
             <Upload
