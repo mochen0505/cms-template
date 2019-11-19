@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  Form,
-  Input,
-  Radio,
-  DatePicker,
-  Cascader,
-} from 'antd';
+import { Button, Form, Input, Radio, DatePicker, Cascader } from 'antd';
 import { withTranslation } from 'react-i18next';
 import '../index.less';
 import localeData from './data';
@@ -52,7 +45,7 @@ class ProfileForm extends React.Component {
           province: values['address'][0] || null,
           city: values['address'][1] || null,
           district: values['address'][2] || null,
-          county: values['address'][3] || null,
+          county: values['address'][3] || null
         };
         onEvent('profileSubmit', params);
       }
@@ -70,7 +63,7 @@ class ProfileForm extends React.Component {
       province,
       city,
       district,
-      county,
+      county
     } = profile;
     const { getFieldDecorator } = form;
 
@@ -104,19 +97,13 @@ class ProfileForm extends React.Component {
     return (
       <Form>
         <FormItem label={t('姓名')} {...formItemLayout}>
-          {formProps.name(
-            <Input disabled={true}/>
-          )}
+          {formProps.name(<Input disabled={true} />)}
         </FormItem>
         <FormItem label={t('手机号码')} {...formItemLayout}>
-          {formProps.mobile(
-            <Input disabled={true}/>
-          )}
+          {formProps.mobile(<Input disabled={true} />)}
         </FormItem>
         <FormItem label={t('余额')} {...formItemLayout}>
-          {formProps.balance(
-            <Input disabled={true}/>
-          )}
+          {formProps.balance(<Input disabled={true} />)}
         </FormItem>
         <FormItem label={t('性别')} {...formItemLayout}>
           {formProps.gender(
@@ -128,18 +115,12 @@ class ProfileForm extends React.Component {
         </FormItem>
         <FormItem label={t('生日')} {...formItemLayout}>
           {formProps.birthday(
-            <DatePicker
-              placeholder={t('选择日期')}
-              style={{ width: '100%' }}
-            />
+            <DatePicker placeholder={t('选择日期')} style={{ width: '100%' }} />
           )}
         </FormItem>
         <FormItem label={t('所在省市')} {...formItemLayout}>
           {formProps.address(
-            <Cascader
-              placeholder={t('选择所在省市')}
-              options={localeData}
-            />
+            <Cascader placeholder={t('选择所在省市')} options={localeData} />
           )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>

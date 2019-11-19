@@ -1,13 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-  Card,
-  Row,
-  Col,
-  Form,
-  Upload,
-  Icon
-} from 'antd';
+import { Card, Row, Col, Form, Upload, Icon } from 'antd';
 import { withTranslation } from 'react-i18next';
 import {
   handleProfile,
@@ -22,7 +15,7 @@ import ProfileForm from './components/profile-form';
 
 const uploadConfigs = {
   fileSize: 2,
-  fileType: [ 'png', 'jpeg', 'jpg' ]
+  fileType: ['png', 'jpeg', 'jpg']
 };
 
 const mapStateToProps = (state) => {
@@ -65,21 +58,24 @@ class Profile extends React.Component {
     }
   };
 
-  beforeUpload = (file) => new Promise((resolve, reject) => {
-    const { t } = this.props;
-    const isLtSize = file.size / 1024 / 1024 < uploadConfigs.fileSize;
-    const extension = file.name && file.name.match(matchExtension) && file.name.match(matchExtension)[1];
-    if (!isLtSize) {
-      utils.nMessage.error(t('超过2MB'));
-      reject(file);
-
-    } else if (!uploadConfigs.fileType.includes(extension)) {
-      utils.nMessage.error(t('格式错误'));
-      reject(file)
-    } else {
-      resolve(file)
-    }
-  });
+  beforeUpload = (file) =>
+    new Promise((resolve, reject) => {
+      const { t } = this.props;
+      const isLtSize = file.size / 1024 / 1024 < uploadConfigs.fileSize;
+      const extension =
+        file.name &&
+        file.name.match(matchExtension) &&
+        file.name.match(matchExtension)[1];
+      if (!isLtSize) {
+        utils.nMessage.error(t('超过2MB'));
+        reject(file);
+      } else if (!uploadConfigs.fileType.includes(extension)) {
+        utils.nMessage.error(t('格式错误'));
+        reject(file);
+      } else {
+        resolve(file);
+      }
+    });
 
   handleChange = (info) => {
     const { t } = this.props;
@@ -115,9 +111,7 @@ class Profile extends React.Component {
 
   render() {
     const { profile, t } = this.props;
-    const {
-      avatar
-    } = this.props.profile;
+    const { avatar } = this.props.profile;
 
     const uploadButton = (
       <div>
@@ -129,7 +123,7 @@ class Profile extends React.Component {
       <Card bordered={false} className="profile">
         <Row type="flex" justify="space-around">
           <Col xs={24} sm={24} md={8}>
-            <ProfileForm onEvent={this.onEvent} profile={profile}/>
+            <ProfileForm onEvent={this.onEvent} profile={profile} />
           </Col>
           <Col xs={24} sm={24} md={8}>
             <Upload
