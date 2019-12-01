@@ -1,9 +1,14 @@
-import { LOADING, TOKEN } from '../constants/actionTypes';
+import { CAPTCHA_BUTTON, LOADING, TOKEN } from '../constants/actionTypes';
 import utils from '../../libs/utils';
 
 const handleLoading = (isLoading) => ({
   type: LOADING,
   isLoading
+});
+
+const disableCaptcha = (isDisabled) => ({
+  type: CAPTCHA_BUTTON,
+  isDisabled
 });
 
 const token = (token) => {
@@ -54,6 +59,7 @@ const handleCaptcha = (params) => {
         .then((res) => {
           const data = res.data;
           if (data) {
+            dispatch(disableCaptcha(true));
             resolve(data);
           } else {
             resolve(-1);
@@ -121,4 +127,10 @@ const handleSignOut = () => {
   };
 };
 
-export { handleSignIn, handleCaptcha, handleSignUp, handleSignOut };
+export {
+  handleSignIn,
+  disableCaptcha,
+  handleCaptcha,
+  handleSignUp,
+  handleSignOut
+};

@@ -17,8 +17,7 @@
   "注册失败": "Sign up failed",
   "请输入用户名": "Please enter your username",
   "5-12个字符,只可包含数字和中英文字符": "5-12 numbers or characters only",
-  "6-13个字符,只可包含数字字母下划线":
-  "6-13 numbers, characters or underscores",
+  "6-13个字符,只可包含数字字母下划线": "6-13 numbers, characters or underscores",
   "密码不一致": "Passwords does not match",
   "请输入验证码": "Please enter the captcha",
   "请勾选": "Check to agree",
@@ -28,7 +27,7 @@
   "保存": "Save",
   "保存成功": "Saved",
   "保存失败": "Save failed",
-  "只能上传JPG": "Only JPGs are allowed",
+  "格式错误": "Incorrect Format",
   "超过2MB": "Exceed 2MB",
   "上传": "Upload",
   "上传成功": "Uploaded",
