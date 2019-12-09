@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Button, Form, Input, Radio, DatePicker, Cascader } from 'antd';
 import { withTranslation } from 'react-i18next';
 import '../index.less';
@@ -30,7 +31,14 @@ const tailFormItemLayout = {
   }
 };
 
-class ProfileForm extends React.Component {
+type Props = {
+  form: Object,
+  onEvent: Function,
+  profile: Object,
+  t: Function
+};
+
+class ProfileForm extends React.Component<Props> {
   handleClick = (e) => {
     e.preventDefault();
     const { form, onEvent } = this.props;
@@ -67,7 +75,7 @@ class ProfileForm extends React.Component {
     } = profile;
     const { getFieldDecorator } = form;
 
-    let formProps = [];
+    let formProps = {};
     formProps.name = getFieldDecorator('name', {
       initialValue: name
     });

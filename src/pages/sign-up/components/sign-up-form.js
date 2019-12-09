@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Form, Input, Icon, Button, Row, Col, Checkbox } from 'antd';
 import { withTranslation } from 'react-i18next';
@@ -6,7 +7,21 @@ import '../index.less';
 
 const FormItem = Form.Item;
 
-class SignUpForm extends React.Component {
+type Props = {
+  form: Object,
+  onEvent: Function,
+  isLoading: boolean,
+  disabled: boolean,
+  t: Function
+};
+
+type State = {
+  confirmDirty: boolean,
+  count: number
+};
+
+class SignUpForm extends React.Component<Props, State> {
+  interval: Function;
   constructor(props) {
     super(props);
     this.state = {
@@ -85,7 +100,7 @@ class SignUpForm extends React.Component {
     const { form, t } = this.props;
     const { getFieldDecorator } = form;
 
-    let formProps = [];
+    let formProps = {};
     formProps.name = getFieldDecorator('name', {
       rules: [
         { required: true, message: t('请输入用户名') },

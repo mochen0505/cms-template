@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Form, Input, Icon, Button } from 'antd';
 import { withTranslation } from 'react-i18next';
@@ -6,7 +7,14 @@ import '../index.less';
 
 const FormItem = Form.Item;
 
-class LoginForm extends React.Component {
+type Props = {
+  form: Object,
+  onEvent: Function,
+  isLoading: boolean,
+  t: Function
+};
+
+class LoginForm extends React.Component<Props> {
   handleClick = (e) => {
     e.preventDefault();
     const { form, onEvent } = this.props;
@@ -22,7 +30,7 @@ class LoginForm extends React.Component {
     const { form, t } = this.props;
     const { getFieldDecorator } = form;
 
-    let formProps = [];
+    let formProps = {};
     formProps.mobile = getFieldDecorator('mobile', {
       rules: [
         { required: true, message: t('请输入手机号码') },
