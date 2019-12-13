@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a90f6f-28d3-423d-b93a-107e309b4938" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.flowconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/eslintPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/components/login-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/components/login-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/profile-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/profile-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-up/components/sign-up-form.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +105,9 @@
       <workItem from="1573108102713" duration="17119000" />
       <workItem from="1573190525820" duration="14974000" />
       <workItem from="1574165025172" duration="4217000" />
-      <workItem from="1575879458902" duration="7674000" />
+      <workItem from="1575879458902" duration="8470000" />
+      <workItem from="1575976175968" duration="480000" />
+      <workItem from="1576149618045" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="reconstructured">
       <created>1571497024479</created>
@@ -179,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573442909883</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: flow added">
+      <created>1575894106312</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575894106312</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +226,7 @@
     <MESSAGE value="fix: format" />
     <MESSAGE value="fix: minor" />
     <MESSAGE value="省市区县" />
-    <option name="LAST_COMMIT_MESSAGE" value="省市区县" />
+    <MESSAGE value="feat: flow added" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: flow added" />
   </component>
 </project>

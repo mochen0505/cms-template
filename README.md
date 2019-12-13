@@ -37,7 +37,8 @@ CMS-TEMPLATE
 
 * More functionality
     * Skeleton screens
-    * More pages
+    * Table
+    * WebSocket
 * Optimization
 * Redux-saga
 * Immutable
